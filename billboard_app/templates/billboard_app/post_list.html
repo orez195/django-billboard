@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% load staticfiles %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Pinyon+Script|Poiret+One" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>Or's Billboard</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4"></div>
+            <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4" id="main-header">BILLBOARD</div>
+            <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4"></div>
+        </div>
+        {% for post in posts %}
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
+                <div id="main-post">
+                    <p id="pub-date">{{ post.published_date }}</p>
+                    <p id="title">{{ post.title }}</p>
+                    <p id="text-body">{{ post.text }}</p>
+                    <span id="user-name">{{ post.user_name }}</span>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
