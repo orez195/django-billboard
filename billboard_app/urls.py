@@ -4,6 +4,5 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
-    url(r'^list$', views.post_list),
-    # url(r'^create/$', views.post_create),
+    url(r'^', views.post_list),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

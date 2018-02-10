@@ -31,15 +31,14 @@
             </div>
         </div>
         {% endfor %}
-        <div id="form-display" >
+        <form method="POST" action='' id="main-form">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
-                    <form method="POST" action='' id="main-form">
-                        {% csrf_token %} {{ form.as_p }}
+                    {% csrf_token %} {{ form.as_p }}
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12 dashed-row" id="submit-row">
+                <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12 dashed-row">
                     <button id="remove-row" onclick="removeRow();">
                         <i class="fas fa-window-close"></i>
                     </button>
@@ -47,16 +46,15 @@
                         <i class="fas fa-check"></i>
                     </button>
                 </div>
-                </form>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12 dashed-row" >
-                <button id="add-form" onclick="addForm();">
+        </form>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12 dashed-row">
+                    <button id="add-form" onclick="addForm();">
                         <i class="fas fa-plus"></i>
-                </button>
+                    </button>
+                </div>
             </div>
-        </div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
