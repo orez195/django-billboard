@@ -1,23 +1,4 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    {% load staticfiles %}
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Anton|Pinyon+Script|Poiret+One" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-    <title>Or's Billboard</title>
-</head>
-
-<body>
-    <form method="POST" action=''>
-        {% csrf_token %} {{ form.as_p }}
-        <input type="submit" value="Submit">
-    </form>
-</body>
-
-</html>
+<form method="POST" action=''>
+    {% csrf_token %} {{ form.as_p }}
+    <input type="submit" value="Submit">
+</form>

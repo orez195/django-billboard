@@ -7,7 +7,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Anton|Pinyon+Script|Poiret+One" rel="stylesheet">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
@@ -17,7 +16,9 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12" id="main-header">BILLBOARD</div>
+            <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4"></div>
+            <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4" id="main-header">BILLBOARD</div>
+            <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4"></div>
         </div>
         {% for post in posts %}
         <div class="row">
@@ -26,37 +27,11 @@
                     <p id="pub-date">{{ post.published_date }}</p>
                     <p id="title">{{ post.title }}</p>
                     <p id="text-body">{{ post.text }}</p>
-                    <div id="user-name">{{ post.user_name }}</div>
+                    <span id="user-name">{{ post.user_name }}</span>
                 </div>
             </div>
         </div>
         {% endfor %}
-        <div id="form-display" >
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
-                    <form method="POST" action='' id="main-form">
-                        {% csrf_token %} {{ form.as_p }}
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12 dashed-row" id="submit-row">
-                    <button id="remove-row" onclick="removeRow();">
-                        <i class="fas fa-window-close"></i>
-                    </button>
-                    <button type="submit" id="submit-btn">
-                        <i class="fas fa-check"></i>
-                    </button>
-                </div>
-                </form>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12 dashed-row" >
-                <button id="add-form" onclick="addForm();">
-                        <i class="fas fa-plus"></i>
-                </button>
-            </div>
-        </div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

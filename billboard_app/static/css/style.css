@@ -2,6 +2,7 @@
     font-family: 'Anton', sans-serif;
     font-size: 40px;
     color: black;
+    text-align: center;
 }
 
 #main-post{
@@ -10,6 +11,7 @@
     font-family: 'Poiret One', cursive;
     margin-bottom: 25px;
     word-wrap: break-word;
+    position: relative;
 }
 
 #pub-date{
@@ -28,16 +30,82 @@
     font-family: 'Anton', sans-serif;
     font-size: 30px;
     color: #00b7ef;
+    margin: 15px;
 }
 
 #text-body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     color: #c1bfc0;
+    margin: 10px;
+    margin-bottom: 40px;
 }
 
 #user-name{
     font-family: 'Pinyon Script', cursive;
     font-size:24px;
     color:black;
+    position: absolute;
+    right: 20px;
+    margin-top: -37px;
+}
+
+label{
+    display: none;
+}
+
+#main-form{
+    border: 3px dashed #00b7ef;
+    max-width: 800px;
+    position: relative;
+    height: 225px;
+}
+
+#id_text{
+    width: 90%;
+    height: 100px;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+#id_user_name{
+    position: absolute;
+    right: 5%;
+}
+
+#id_title{
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+.svg-inline--fa{
+    font-size: 16px;
+    color: white;
+}
+
+#submit-btn{
+    background-color: #66CDAA;
+    width: 11%;
+}
+
+.dashed-row{
+    margin-top: 2%;
+    border: 1px dashed black;
+    max-width: 800px;
+    text-align: center;
+    margin-left: 15px;
+    padding: 1%;
+}
+
+#remove-row{
+    background-color: red;
+    font-size: 16px;
+    width: 11%;
+}
+
+#add-form{
+    background-color: #66CDAA;
+    width: 11%;
+    font-size: 16px;
+    color: white;
 }

@@ -8,11 +8,10 @@ from django.utils import timezone
 
 @python_2_unicode_compatible
 class Post(models.Model):
-    user_name = models.ForeignKey('auth.User')
+    published_date = models.DateTimeField(auto_now_add=True)
     title = models.CharField(max_length=150)
     text = models.TextField()
-    published_date = models.DateTimeField(
-        default=timezone.now)
+    user_name = models.ForeignKey('auth.User')
 
     def __str__(self):
         return self.title
